@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 declare global {
 	let mongoose: any
 }
-const cached = global.mongoose || { conn: null, promise: null }
+const cached = (global as any).mongoose || { conn: null, promise: null }
 
 export const connectToDatabase = async (
 	MONGODB_URI = process.env.MONGODB_URI
