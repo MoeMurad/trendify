@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
 declare global {
-	var mongoose: any
+	let mongoose: any
 }
 const cached = global.mongoose || { conn: null, promise: null }
 
