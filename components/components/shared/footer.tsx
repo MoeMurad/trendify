@@ -26,6 +26,7 @@ export default function Footer() {
 				</div>
 				<div className='flex justify-center text-sm'>
 					<p>© 2000-2025, {APP_NAME}, Inc. or its Affiliates</p>
+					<p>, Designed & Developed by Kalos</p>
 				</div>
 				<div className='mt-8 flex justify-center text-sm text-white-500'>
 					Malaysia, Selangor, Semenyih, Eco Forest, 43500 | +60 18 359 0065
