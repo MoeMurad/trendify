@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { IProduct } from '@/lib/db/models/product.model'
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 
 export default function SelectVariant({
 	product,
@@ -23,9 +24,12 @@ export default function SelectVariant({
 						<Button
 							asChild
 							variant='outline'
-							className={
-								selectedColor === x ? 'border-2 border-primary' : 'border-2'
-							}
+							className={cn(
+								'border',
+								selectedColor === x
+									? 'border-primary ring-2 ring-primary/50 bg-primary/5'
+									: 'border-input'
+							)}
 							key={x}
 						>
 							<Link
@@ -54,9 +58,12 @@ export default function SelectVariant({
 						<Button
 							asChild
 							variant='outline'
-							className={
-								selectedSize === x ? 'border-2  border-primary' : 'border-2  '
-							}
+							className={cn(
+								'border',
+								selectedSize === x
+									? 'border-primary ring-2 ring-primary/50 bg-primary/5'
+									: 'border-input'
+							)}
 							key={x}
 						>
 							<Link
